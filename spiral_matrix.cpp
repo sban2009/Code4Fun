@@ -3,9 +3,9 @@ using namespace std;
 int main()
 {
 	int row = 3, col = 4;
-	int A[3][4] = {{1, 2, 3, 4},
-				   {5, 6, 7, 8},
-				   {9, 10, 11, 12}};
+	int A[3][4] = { {1, 2, 3, 4},
+			{5, 6, 7, 8},
+			{9, 10, 11, 12} };
 	cout << "spiral form: ";
 	int D[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 	int i = 0, j = 0, i_next, j_next, dir = 0, count = 0;
