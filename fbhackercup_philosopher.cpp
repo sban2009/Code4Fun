@@ -1,5 +1,5 @@
 /*
-TCS CodeVita Season 9 (2020) Problem
+FB Hacker Cup Problem Round 1 (2020)
 It is known that Philosopher's Stones break apart into an odd number of shards when they're used up. After searching far and wide, Edgar has collected N shards of what he believes to be a previously-used Philosopher's Stone, where N is an odd integer. He believes that fusing these shards back together will yield a real stone in its entirety. Leveraging his encyclopedic knowledge of alchemy, Edgar recalls an ancient book with the following ritual for fusing shards:
 1. Arrange the N shards in a row, numbered from 1 to N
 2. Note the colour C(i) of each shard i, which is either auburn or black (denoted by the characters 'A' and 'B' respectively).
