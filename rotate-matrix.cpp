@@ -3,7 +3,7 @@ using namespace std;
 vector<vector<int>> rotate(const vector<vector<int>> A, int m, int n, int dir = 0) //brute force O(m*n) t&s
 {
 	array<array<int, 2>, 2> shift = {{{+1, -1},
-									  {-1, +1}}};
+					  {-1, +1}}};
 	vector<vector<int>> B(m, vector<int>(n, 0));
 	int i_b, j_b, i_re;
 	if (dir == 0) //clock
