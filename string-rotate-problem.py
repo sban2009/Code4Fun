@@ -1,10 +1,9 @@
 '''
 Rotate a given String in specified direction by specified magnitude.
-
-After each rotation make a note of first character of the rotated String, After all rotation are performed the accumulated first character as noted previously will form another string, say FIRSTCHARSTRING.
-
+After each rotation make a note of first character of the rotated String.
+After all rotation are performed the accumulated first character
+as noted previously will form another string, say FIRSTCHARSTRING.
 Check If FIRSTCHARSTRING is an Anagram of any substring of the Original string.
-
 If yes print "YES" otherwise "NO".
 '''
 
@@ -17,6 +16,7 @@ def rotator(s,rot,mag):
         Rfirst = s[0 : len(s)-mag] 
         Rsecond = s[len(s)-mag : ]
         return(Rsecond + Rfirst)
+    
 s = input()
 q=int(input())
 rot=[]
