@@ -50,13 +50,25 @@ int main()
 		return 0;
 	}
 	map<int, int> graph; // stores x factors, with #edges
+	bool done = false;
 	int c = 0;
 	while (x != 1) // x not prime
 	{
 		c++;
 		x = factor(x);
 		graph[x] = c; // insert <node,#edges>
+		if (x == y)	  // no need to travel further
+		{
+			done = true;
+			break;
+		}
 	}
+	if (done) // y is in x factors
+	{
+		cout << "#edges: " << graph[y] << "\n";
+		return 0;
+	}
+	// ^ this will reduce #operations in cases where y is very close to x
 	c = 0;
 	while (!graph.count(y)) // y not present in graph
 	{
@@ -64,7 +76,7 @@ int main()
 		y = factor(y);
 	}
 	// #total edges = #(x factors till y link) + #(y link to y)
-	cout << "#edges: "<<graph[y] + c << "\n";
+	cout << "#edges: " << graph[y] + c << "\n";
 	return 0;
 }
 /*
