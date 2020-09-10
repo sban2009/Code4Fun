@@ -69,6 +69,7 @@ int main()
 		return 0;
 	}
 	// ^ this will reduce #operations in cases where y is very close to x
+	// e.g. x=n and y=n/2 and n is very large
 	c = 0;
 	while (!graph.count(y)) // y not present in graph
 	{
