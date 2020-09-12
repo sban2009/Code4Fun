@@ -81,12 +81,11 @@ int main()
 	return 0;
 }
 /*
-example: 
+example w/ explanation: 
 enter 1st num: 54
 enter 2nd num: 36
 #edges: 4
 
-explanation:
 map looks like
 27: 1, 9: 2, 3: 3, 1: 4
 #edges in x graph = 4
