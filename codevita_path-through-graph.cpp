@@ -49,7 +49,7 @@ int main()
 		cout << 0;
 		return 0;
 	}
-	map<int, int> graph; // stores x factors, with #edges
+	unordered_map<int, int> graph; // stores x factors, with #edges
 	bool done = false;
 	int c = 0;
 	while (x != 1) // x not prime
