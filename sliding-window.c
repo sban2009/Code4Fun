@@ -51,6 +51,6 @@ max product: 64
 
 explanation: for window with i=2
 prod	= A[2]*A[3]*A[4]*A[5]
-		=(-1)*2*8*(-4)
-		= 64
+	=(-1)*2*8*(-4)
+	= 64
 */
