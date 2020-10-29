@@ -1,5 +1,5 @@
 /*
-Given an array arr[] of N integers arranged in a circular fashion.
+Given an array A[] of n integers arranged in a circular fashion.
 To find: maximum contiguous subarray sum.
 */
 #include <stdio.h>
