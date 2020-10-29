@@ -39,21 +39,21 @@ int main()
 	for (i = 0; i < n; i++)
 		scanf("%d", &A[i]);
 	/* loop for finding maximum sum */
-	for (win = 1; win <= n; win++)
+	for (win = 1; win <= n; win++) /* window size 1 to n */
 	{
 		max = maxsum(A, n, win);
 		/*printf("win %d maxsum = %d\n\n", win, max);*/
 		if (max > final_max)
 			final_max = max;
 	}
-	printf("max subaray sum: %d\n", final_max);
+	printf("max subarray sum: %d\n", final_max);
 	return 0;
 }
 /*
 Sample I/O:
 enter array size: 7
 enter array: 8 -8 9 -9 10 -11 12
-max subaray sum: 22
+max subarray sum: 22
 
 Explanation: Starting from the last element of the array,
 and moving in circular fashion, we have max subarray as
