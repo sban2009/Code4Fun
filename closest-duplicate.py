@@ -3,7 +3,7 @@ find nearest repeated value of an array
 e.g. A=[1,2,5,4,2,1,3,3,7,2] will give 3 as the closest repeated value (index 6,7-> distance=0)
 '''
 
-A = [1, 2, 3, 4, 2, 2, 1, 3]
+A = list(map(int, input.split()))
 
 # hashmap holding key:[latest_index, min_distance] pairs
 hm = dict()
