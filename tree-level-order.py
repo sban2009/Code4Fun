@@ -82,14 +82,32 @@ def spiral(root):
     return result
 
 
+def vertical_order(root, hd, m):
+    if not root:
+        return
+    try:
+        m[hd].append(root.data)
+    except:
+        m[hd] = [root.data]
+    vertical_order(root.left, hd - 1, m)
+    vertical_order(root.right, hd + 1, m)
+
+
+def vertical_order_print(root):
+    hm = dict()
+    vertical_order(root, 0, hm)
+    for hd in sorted(hm):
+        print(hm[hd], end=" ")
+
+
 def main():
     """
     binary tree:
-        3
-       / \
-      9   20
-     /    / \
-    5    15  7
+          3
+       /     \
+      9       20
+     /      /   \
+    5     15     7
     """
     root = node(3)
     root.left = node(9)
@@ -101,6 +119,7 @@ def main():
     print(max_width(root))
     print(level_order(root))
     print(spiral(root))
+    vertical_order_print(root)
 
 
 if __name__ == "__main__":
