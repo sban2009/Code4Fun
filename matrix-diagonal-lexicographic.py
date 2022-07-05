@@ -37,6 +37,14 @@ def repeat(s, n):
 
 
 def solution(matrix):
+    """_summary_
+
+    Args:
+        matrix (2d list): Matrix with alphabets of n x n dimensions
+
+    Returns:
+        list: Ordering of diagonals lexicographically
+    """
     l = len(matrix[0])
     # diagonal number list
     diag = [i for i in range(1, 2 * l)]
@@ -63,6 +71,7 @@ def solution(matrix):
             j += 1
         k += 1
 
+    # dictionary with complete diagonals
     d = dict()
     for i in range(len(diag)):
         d[diag[i]] = repeat(st[i], l)
