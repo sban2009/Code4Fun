@@ -22,34 +22,28 @@ No time/space constraint
 
 
 def find_max_apples_solution(A, K, L):
-    a = find_max_apples(A, K, L)
-    b = find_max_apples(A, L, K)
-    return max(a, b)
+    alice = find_max_apples(A, K, L)
+    bob = find_max_apples(A, L, K)
+    return max(alice, bob)
 
 
 def find_max_apples(A, k, l):
     if k + l > len(A):
         return -1
-    sum_app = [0] * len(A)
-    sum_app[0] = A[0]
+    apples_sum = [0] * len(A)
+    apples_sum[0] = A[0]
     for i in range(1, len(A)):
-        sum_app[i] = sum_app[i - 1] + A[i]
-    max_app = -1
+        apples_sum[i] = apples_sum[i - 1] + A[i]
+    max_apples = -1
     x, y = 0, 0
     a = 0
     while a + k - 1 < len(A):
-        if a > 0:
-            x = sum_app[a + k - 1] - sum_app[a - 1]
-        else:
-            x = sum_app[a + k - 1]
+        x = apples_sum[a + k - 1] - apples_sum[a - 1] if a > 0 else apples_sum[a + k - 1]
         b = a + k
         while b + l - 1 < len(A):
-            if b > 0:
-                y = sum_app[b + l - 1] - sum_app[b - 1]
-            else:
-                y = sum_app[b + l - 1]
-            if x + y > max_app:
-                max_app = x + y
+            y = apples_sum[b + l - 1] - apples_sum[b - 1] if b > 0 else apples_sum[b + l - 1]
+            if x + y > max_apples:
+                max_apples = x + y
             b += 1
         a += 1
-    return max_app
+    return max_apples
