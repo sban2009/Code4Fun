@@ -41,3 +41,19 @@ def sum_of_multiples_arithmetic(limit):
 
 # Time Complexity: O(1), as we are using a constant number of operations.
 # Space Complexity: O(1)
+
+if __name__ == "__main__":
+    limit = 1000
+    # print("Sum of multiples of 3 or 5 below", limit, "is:", sum_of_multiples(limit))
+    # print(
+    #     "Sum of multiples of 3 or 5 below",
+    #     limit,
+    #     "using one-liner is:",
+    #     sum_of_multiples_short(limit),
+    # )
+    print(
+        "Sum of multiples of 3 or 5 below",
+        limit,
+        "using arithmetic series is:",
+        sum_of_multiples_arithmetic(limit),
+    )
